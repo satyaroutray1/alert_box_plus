@@ -1,17 +1,62 @@
 import 'package:flutter/material.dart';
 
-class SmartAlertDialog extends StatefulWidget {
-  const SmartAlertDialog({super.key});
 
-  @override
-  State<SmartAlertDialog> createState() => _SmartAlertDialogState();
+Future<Future> SmartAlertDialog(BuildContext context, TextEditingController textFieldController) async {
+  return showDialog(
+      context: context,
+      builder: (ctx) =>
+          AlertDialog(
+            title: Text('To Do Task'),
+            content: TextField(
+              controller: textFieldController,
+              decoration: InputDecoration(
+                  hintText: "Task"),
+            ),
+            actions: <Widget>[
+              TextButton(
+                child: Text('CANCEL'),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+              TextButton(
+                child: Text('OK'),
+                onPressed: () {
+                  print(textFieldController.text);
+                  Navigator.pop(context);
+
+                },
+              ),
+            ],
+          ));
 }
 
-class _SmartAlertDialogState extends State<SmartAlertDialog> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(),
-    );
-  }
+
+
+
+Future<Future> DialogActions(BuildContext context,
+    {String? button1Text, String? button2Text, String? title, String? contentText,}) async {
+  return showDialog(
+      context: context,
+      builder: (ctx) =>
+          AlertDialog(
+            title: Text(title ?? 'Notification'),
+            content: Text(contentText ?? 'Do you want to proceed further?'),
+            actions: [
+              TextButton(
+                child: Text(button2Text ?? 'CANCEL'),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+              TextButton(
+                child: Text(button1Text?.toUpperCase() ?? 'PROCEED',
+                  style: TextStyle(
+                ),),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ));
 }
