@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_alert_dialog/smart_alert_dialog.dart';
+import 'package:smart_alert_dialog/custom_alert_dialog.dart';
 
 void main() {
   runApp(const MyApp());

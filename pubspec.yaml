@@ -1,7 +1,7 @@
-name: smart_alert_dialog
-description: "A new Flutter package."
+name: custom_alert_dialog
+description: customizable alert dialogs
 version: 0.0.1
-homepage:
+homepage: https://github.com/satyaroutray1/smart_alert_dialog
 
 environment:
   sdk: ^3.7.2
