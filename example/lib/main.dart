@@ -32,7 +32,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
+  TextEditingController textEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,10 +40,30 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: ElevatedButton(onPressed: (){
-        DialogActions(context, button1Text: 'yes');
-      }, child: Text('DialogActions')
-      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            ElevatedButton(onPressed: (){
+              smartAlertDialog(
+                  context, textEditingController);
+            }, child: Text('DialogActions')
+            ),
+            ElevatedButton(onPressed: (){
+              smartAlertDialog2(
+                  context, button1Text: 'yes',
+                  button2Text: 'no');
+            }, child: Text('DialogActions with Two Buttons')
+            ),
+
+            ElevatedButton(onPressed: (){
+              smartAlertDialog3(
+                  context, );
+            }, child: Text('DialogAction with One Button')
+            ),
+          ],
+        ),
+      )
     );
   }
 }
