@@ -1,3 +1,4 @@
-## 0.0.1
+## [0.1.0] - 2025-07-14
 
-* TODO: Describe initial release.
+### Fixed
+- design issue
