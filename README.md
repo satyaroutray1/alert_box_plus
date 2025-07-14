@@ -35,7 +35,7 @@ dependencies:
 
 Then run:
     flutter pub get
-
+```
 
 ---
 🙌 Author
