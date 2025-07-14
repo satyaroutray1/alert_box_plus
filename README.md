@@ -1,78 +1,43 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# 🚨 alert_box_plus
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+A customizable, modern-looking alert dialog package for Flutter.  
+`alert_box_plus` helps you show consistent, simple alert boxes with minimal code — perfect for quick notifications, confirmations, and messages in both light and dark themes.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-alert_box_plus
+[![Pub Version](https://img.shields.io/pub/v/alert_box_plus.svg)](https://pub.dev/packages/alert_box_plus)
+[![GitHub Stars](https://img.shields.io/github/stars/satyaroutray1/alert_box_plus)](https://github.com/satyaroutray1/alert_box_plus)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Inbuilt container is a custom container which can be used in your Flutter app.
-Installation
+---
 
-    Add the latest version of package to your pubspec.yaml (and rundart pub get):
+## ✨ Features
 
+- ✅ Simple syntax for showing alert dialogs
+- 🎨 Customizable title, message, button colors
+- 🌙 Works with dark mode
+- 🔄 Supports single or dual action buttons
+
+---
+
+<p align="center">
+  <img src="assets/images/screenshots/ss1.jpg" width="250"/>
+  <img src="assets/images/screenshots/ss2.jpg" width="250"/>
+</p>
+
+---
+
+## 🚀 Installation
+
+Add this to your `pubspec.yaml`:
+
+```yaml
 dependencies:
-alert_box_plus: ^0.0.1
+  alert_box_plus: ^0.0.1
 
-    Import the package and use it in your Flutter App.
-
-import 'package:alert_box_plus/alert_box_plus.dart';
-
-Example
-
-There are a number of properties that you can modify:
-
-    button name
-    title
-    description
-    image
+Then run:
+    flutter pub get
 
 
-Code
-```dart
-class _MyHomePageState extends State<MyHomePage> {
-  TextEditingController textEditingController = TextEditingController();
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(widget.title),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ElevatedButton(onPressed: (){
-                smartAlertDialog(
-                    context, textEditingController);
-              }, child: Text('DialogActions')
-              ),
-              ElevatedButton(onPressed: (){
-                smartAlertDialog2(
-                    context, button1Text: 'yes',
-                    button2Text: 'no');
-              }, child: Text('DialogActions with Two Buttons')
-              ),
+---
+🙌 Author
 
-              ElevatedButton(onPressed: (){
-                smartAlertDialog3(
-                  context, );
-              }, child: Text('DialogAction with One Button')
-              ),
-            ],
-          ),
-        )
-    );
-  }
-}
-
-```
-
-![Alt text](images/a.jpg?raw=true "Optional Title")
+Built with ❤️ by 🌐 [Satya Routray](satya-routray.web.app)

@@ -1,5 +1,5 @@
+import 'package:alert_box_plus/alert_box_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:smart_alert_dialog/alert_box_plus.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,9 +45,9 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ElevatedButton(onPressed: (){
-              smartAlertDialog(
-                  context, textEditingController);
-            }, child: Text('DialogActions')
+              smartAlertDialog3(
+                  context, );
+            }, child: Text('DialogAction with One Button')
             ),
             ElevatedButton(onPressed: (){
               smartAlertDialog2(
@@ -55,11 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   button2Text: 'no');
             }, child: Text('DialogActions with Two Buttons')
             ),
-
             ElevatedButton(onPressed: (){
-              smartAlertDialog3(
-                  context, );
-            }, child: Text('DialogAction with One Button')
+              smartAlertDialog(
+                  context, textEditingController);
+            }, child: Text('DialogActions')
             ),
           ],
         ),

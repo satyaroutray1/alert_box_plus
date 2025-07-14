@@ -43,7 +43,7 @@ Future<Future> smartAlertDialog2(BuildContext context,
             content: Text(contentText ?? 'Do you want to proceed further?'),
             actions: [
               TextButton(
-                child: Text(button2Text ?? 'CANCEL'),
+                child: Text(button2Text?.toUpperCase() ?? 'CANCEL'),
                 onPressed: () {
                   Navigator.pop(context);
                 },
